@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* custom scrollbar start */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* custom scrollbar end */
+
+.footer__links {
+  @apply hover:ml-3 hover:text-[#c42b2a] duration-200 text-gray-400 uppercase;
+}
+
+.footer__social__icons {
+  @apply bg-[#1b2133] w-10 h-10 flex items-center justify-center rounded-md cursor-pointer hover:bg-[#c42b2a] duration-300;
+}
+
+.services__cart__item {
+  @apply bg-[#f3f3f6] p-6 lg:p-0 mb-4 rounded-2xl lg:flex lg:hover:-translate-y-5 duration-300;
+}
+
+.custom__input {
+  @apply bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full outline-none;
+}
+
+.contact__input {
+  @apply bg-white border-b border-black placeholder:text-[14px] outline-none;
+}
+
+.gallery__photo {
+  @apply w-full object-cover h-full object-center block cursor-pointer hover:scale-95 duration-300;
+}
+
+.gallery__video {
+  @apply w-full object-cover h-full object-center block cursor-pointer hover:scale-95 duration-300;
+}
+
+/* dropdown start */
+.demo-dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.demo-dropdown a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+}
+
+.demo-dropdown > li {
+  position: relative;
+  display: inline-block;
+}
+
+.demo-dropdown > li > a {
+  padding: 20px 25px;
+}
+
+.demo-dropdown > li ul {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  border: 2px solid #e2e2e2;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: opacity 0.5s ease; /* Geçiş efektini ekleyin */
+}
+
+.demo-dropdown > li ul li a {
+  color: #333;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e2e2e2;
+  border-radius: 10px;
+}
+
+.demo-dropdown > li ul li:hover a {
+  background-color: #e2e2e2;
+  transition: all 0.1s;
+}
+
+.demo-dropdown > li:hover ul {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* dropdown end */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+/* embla carousel start */
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+/* embla carousel end */
+
+/* sticky header start */
+.sticky-header {
+  background-color: transparent;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.sticky-header.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0e1222;
+  transition: background-color 0.3s ease-in-out;
+}
+/* sticky header end */
